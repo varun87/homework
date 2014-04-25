@@ -3,10 +3,10 @@
     <th>title</th>
     <th>author</th>
   </tr>
-<% @ Book.each do |Book| %>       #start loop
+<% Book.each do |the_book| %>       #start loop
   <tr>
-    <td><%= Book.title %></td>  #column book in database
-    <td><%= Book.author %></td>  #column author in database
+    <td><%= the_book.title %></td>  #column book in database
+    <td><%= the_book.author %></td>  #column author in database
   </tr>
 <% end %>                        #end loop
 </table>
