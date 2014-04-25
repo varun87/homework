@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>title</th>
+    <th>author</th>
+  </tr>
+<% @ Book.each do |Book| %>       #start loop
+  <tr>
+    <td><%= Book.title %></td>  #column book in database
+    <td><%= Book.author %></td>  #column author in database
+  </tr>
+<% end %>                        #end loop
+</table>
