@@ -1,7 +1,6 @@
-
-Book:
-  - title: string
-  - author: string
+Book :
+  - title : string
+  - author : string
 
 # Follow the syntax exactly (colons and spacing are important).
 # Column type choices are: string, text, integer, and boolean.
