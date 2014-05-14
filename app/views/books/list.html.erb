@@ -1,14 +1,34 @@
-<table>
-  <tr>
-    <th>title</th>
-    <th>author</th>
+<h1>Books</h1>
 
-<% all_books = Book.read %>
-<% all_books.each do |the_book| %>       #start loop
-  <tr>
-    <td><%= the_book.title %></td>  #column book in database
-    <td><%= the_book.author %></td>  #column author in database
-  </tr>
-
-<% end %>                        #end loop
+<table width="400" border="2px"><style>
+table,th,td
+{
+border:1px solid gray;
+border-collapse:collapse
+}
+</style>
+<tr>
+<th>
+  <style>th
+  {
+  text-align:left;
+  }</style> <FONT COLOR="#696969">Title</FONT></th>
+  <th><FONT COLOR="#696969">Author</FONT></th>
+</tr>
+<tr>
+  <td><FONT COLOR="#778899">A Brief History of Time</FONT></td>
+  <td><FONT COLOR="#778899">Stephen Hawking</FONT></td>
+</tr>
+<tr>
+  <td><FONT COLOR="#778899">Alice in Wonderland</FONT></td>
+  <td><FONT COLOR="#778899">Lewis Carroll</FONT></td>
+</tr>
+<tr>
+  <td><FONT COLOR="#778899">The Lord of the Rings</FONT></td>
+  <td><FONT COLOR="#778899">J.R.R. Tolkien</FONT></td>
+</tr>
+<tr>
+  <td><FONT COLOR="#778899">The Hobbit</FONT></td>
+  <td><FONT COLOR="#778899">J.R.R. Tolkien</FONT></td>
+</tr>
 </table>

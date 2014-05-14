@@ -1,7 +1,16 @@
-Book :
-  - title : string
-  - author : string
+Book:
+  - title: string
+  - author: string
 
+Bookdata:
+  - title: string
+  - author: string
+  - price: integer
+
+Review:
+  -title: string
+  -starrating: integer
+  -review: string
 # Follow the syntax exactly (colons and spacing are important).
 # Column type choices are: string, text, integer, and boolean.
 # You can have as many models as you want in this file.

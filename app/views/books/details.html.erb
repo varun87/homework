@@ -1,0 +1,33 @@
+<% book_id = params["id"] %>
+<% book = Bookdata.read(book_id) %>
+
+<h1>Title: <%= book["title"] %></h1>
+<h2>By <%= book["author"] %></h2>
+
+<p>
+Price: $<%=book["price"]%>
+</P>
+<p>
+<% review = Review.find_by("title" => book["title"])%>
+<% avg = Review.where("title" => book["title"]).average("star_rating")%>
+
+<% if review.present? %> Average star rating: (<% if avg.blank? %> <i>Not yet rated </i><% else %><%= avg.round(2) %> stars <% end %>)
+<% end %>
+</p>
+
+<p>
+<% if review.present? %>
+Reviews:</p>
+<li>
+  <% reviews = Review.where("title" => book["title"]) %>
+
+  <ul>
+    <% reviews.each do |review| %>
+      <% comment = Review.find_by("title" => book["title"]) %>
+
+<li><%= review %>
+</li>
+    <% end %>
+  </ul>
+  <% end %>
+</p>
